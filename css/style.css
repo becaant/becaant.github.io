@@ -1,4 +1,4 @@
-/* Basic Reset */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -8,12 +8,12 @@
 /* General Styling */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
     padding: 20px;
 }
 
+/* Header Styling */
 header {
     text-align: center;
     margin-bottom: 40px;
@@ -21,7 +21,6 @@ header {
 
 header h1 {
     font-size: 2.5em;
-    margin-bottom: 10px;
 }
 
 header p {
@@ -34,26 +33,56 @@ header p {
     margin-bottom: 40px;
 }
 
-#about h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+/* Projects Section */
+#projects {
+    text-align: center;
 }
 
-/* Projects Section */
-#projects h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px 0;
 }
 
 .project {
-    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
 }
 
 .project h3 {
-    font-size: 1.5em;
+    font-size: 1.2em;
+    margin-top: 10px;
 }
 
-/* Footer Section */
+.project p {
+    font-size: 0.9em;
+    margin: 10px 0;
+    color: #555;
+}
+
+.project-link {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
 footer {
     text-align: center;
     margin-top: 40px;
@@ -71,4 +100,17 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
 }
