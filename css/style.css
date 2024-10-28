@@ -35,6 +35,41 @@ nav a:hover {
     border-radius: 8px;
 }
 
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+.project {
+    background-color: #f9f9f9; /* Background color for project items */
+    border: 1px solid #ccc; /* Border around project items */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside project items */
+    text-align: center; /* Center the text */
+}
+
+.project img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.project-link {
+    display: inline-block; /* Button-like appearance */
+    margin-top: 10px; /* Space above the link */
+    padding: 10px 15px; /* Padding for link */
+    background-color: #007BFF; /* Background color for the button */
+    color: white; /* Text color */
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.project-link:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
 .skills-section {
     display: flex;
     justify-content: space-around;
@@ -64,4 +99,17 @@ nav a:hover {
 
 footer p {
     margin: 5px 0;
+}
+
+/* Responsive design for project grid */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* Change to 1 column on very small screens */
+    }
 }
