@@ -4,8 +4,8 @@ window.addEventListener('load', () => {
 });
 
 // Example: A function to alert the user when they click on a project (optional)
-document.querySelectorAll('.project').forEach(project => {
-    project.addEventListener('click', () => {
-        alert("Project details will be added soon!");
-    });
-});
+// document.querySelectorAll('.project').forEach(project => {
+//     project.addEventListener('click', () => {
+//         alert("Project details will be added soon!");
+//     });
+// });
