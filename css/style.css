@@ -246,8 +246,6 @@ figcaption {
     background-color: #0d1b2a; /* Darker shade on hover */
 }
 
-
-
 .skills-section {
     display: flex;
     justify-content: space-around;
@@ -273,6 +271,18 @@ figcaption {
     padding: 5px;
     margin: 5px 0;
     border-radius: 5px;
+}
+
+.pdf-container {
+    display: flex;
+    justify-content: center; /* Center the PDF in the container */
+    width: 100%; /* Full width of the viewport */
+    padding-top: 20px;
+}
+
+embed {
+    border: 1px solid #0d1b2a; /* Optional border */
+    border-radius: 8px; /* Optional rounded corners */
 }
 
 footer p {
