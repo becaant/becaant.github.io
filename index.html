@@ -4,95 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anthony Beca - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Anthony Beca</h1>
-        <p>Robotics Engineering @ Queen's University</p>
-        <p>NSERC USRA @ Offroad Robotics</p>
-        <p>Fmr. Team Captain @ Queen's AutoDrive</p>
+<!-- Header Section -->
+<header>
+    <div class="button-container">
+        <a href="projects.html" class="animated-button">Projects</a>
+        <a href="cv.html" class="animated-button">Resume/CV</a>
+        <a href="contact.html" class="animated-button">Contact</a>
+    </div>
+</header>
 
-        <div class="headshot">
-            <img src="assets/Anthony_Beca_square.jpg" alt="Anthony Beca's Headshot">
-        </div>
-
-                <!-- Navigation Links -->
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="cv.html">CV</a> |
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-
-    <!-- About Section -->
-    <!-- <section id="about"> -->
-    <div class="about-me">
-        <div class="about-text">
-            <h2>About</h2>
+<body>
+    <div class="container">
+        <div class="home-text">
+            <h1>Anthony Beca.</h1>
             <p>
-                Hello! I'm a motivated Mechatronics and Robotics Engineering student at Queen's University passionate about systems engineering, mobile robotics, and research. Ultimately, I want to work in a world where robots can go places we can't conceive of yet, performing useful tasks we can't conceive yet. I'm impact-driven, value feedback, and love to learn.
-                <br><br>
-                I find my interests focus on the system design and control of wheeled mobile robots. In the summer of 2024, I had the opportunity to conduct a research project on the automation of motor graders at Ingenuity Labs with MacLean Engineering, with work to be featured on their GR5 and GR8 models. Before that, I led the 90-person Queen's AutoDrive Team to its strongest performance to date. Over the course of a year, we successfully drove autonomously around MCity, earning 3rd place in the Intersection Challenge.
-                <br><br>
-                I am currently looking for Master's (MASc) placements in Canada and the US. My research interests include the systems engineering of mobile robotic systems, with a particular interest in the control/localization/planning of WMRs in complicated environments.
+                <span class="home-role">Robotics Engineering</span> @ 
+                <a href="https://smithengineering.queensu.ca/mre/index" class="home-place">Queen's University</a>
+            </p>
+            <p>
+                <span class="home-role">NSERC USRA</span> @ 
+                <a href="https://www.queensu.ca/offroad-robotics/" class="home-place">Offroad Robotics</a>
+            </p>
+            <p>
+                <span class="home-role">Fmr. Team Captain</span> @ 
+                <a href="https://autodrive.engineering.queensu.ca/" class="home-place">Queen's AutoDrive</a>
             </p>
         </div>
-    </div>
-    <!-- </section> -->
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <div class="project">
-                <img src="assets/grader/GR5.jpg" alt="MacLean GR5 Motor Grader">
-                <h3>Path Following Control of Motor Graders</h3>
-                <p>Developed Feedback Linearized control of Motor Graders, part of USRA research with Dr. Joshua Marshall @ Offroad Robotics</p>
-                <a href="projects/grader-automation.html" class="project-link">Learn more</a>
-            </div>
-            <div class="project">
-                <img src="assets/autodrive/AUTODRIVE_24_4685.jpeg" alt="Queen's AutoDrive Car">
-                <h3>Queen's AutoDrive</h3>
-                <p>Queen's University Autonomous Vehicle Design Team. I was the Team Captain of the Year III entry into GM-SAE AutoDrive Challenge II International Competition</p>
-                <a href="projects/queens-autodrive.html" class="project-link">Learn more</a>
-            </div>
-            <div class="project">
-                <img src="assets/autodrive/LC_Polar_irl.png" alt="LiDAR-Camera Overlay">
-                <h3>LiDAR-Camera Fusion</h3>
-                <p>How can we tell the 3D position of detected objects with camera-based detections, and LiDAR data? I implemented a novel approach to this problem for a 3-LiDAR, 4-camera system with ±15 cm longitunal error at 40m range, at 90 Hz</p>
-                <a href="projects/lidar-camera-fusion.html" class="project-link">Learn more</a>
-            </div>
-            <div class="project">
-                <img src="assets/autodrive/MCity.jpg" alt="AV Global Planner">
-                <h3>Autonomous Vehicle Global Planner</h3>
-                <p>Given a start and end pose, how can we use map and incoming perception data to determine where to drive (legally, of course)?</p>
-                <a href="projects/autodrive/global-planner.html" class="project-link">Learn more</a>
-            </div>
-            <div class="project">
-                <img src="assets/project5.jpg" alt="Project 5 Image">
-                <h3>Multi-Agent Path Planning</h3>
-                <p>Collaborative multi-agent systems for optimized path planning and obstacle avoidance.</p>
-                <a href="projects/project5.html" class="project-link">Learn more</a>
-            </div>
-            <div class="project">
-                <img src="assets/project6.jpg" alt="Project 6 Image">
-                <h3>Industrial Robotics for Manufacturing</h3>
-                <p>Developed industrial robotics solutions tailored to manufacturing processes.</p>
-                <a href="projects/project6.html" class="project-link">Learn more</a>
-            </div>
+        <div class="home-image">
+            <img src="assets/Anthony_Beca_square.jpg" alt="Anthony Beca's Headshot">
         </div>
-    </section>
+    </div>
+</body>
+<div class="about-me">
+    <div class="about-text">
+        <h2>About</h2>
+        <p>
+            Hello! I'm a motivated Mechatronics and Robotics Engineering student at Queen's University passionate about systems engineering, mobile robotics, and research. Ultimately, I want to work in a world where robots can go places we can't conceive of yet, performing useful tasks we can't conceive yet. I'm impact-driven, value feedback, and love to learn.
+            <br><br>
+            I find my interests focus on the system design and control of wheeled mobile robots. In the summer of 2024, I had the opportunity to conduct a research project on the automation of motor graders at Ingenuity Labs with MacLean Engineering, with work to be featured on their GR5 and GR8 models. Before that, I led the 90-person Queen's AutoDrive Team to its strongest performance to date. Over the course of a year, we successfully drove autonomously around MCity, earning 3rd place in the Intersection Challenge.
+            <br><br>
+            I am currently looking for Master's (MASc) placements in Canada and the US. My research interests include the systems engineering of mobile robotic systems, with a particular interest in the control/localization/planning of WMRs in complicated environments.
+        </p>
+    </div>
+</div>
+<!-- </section> -->
 
-    <!-- Contact Section -->
-    <footer>
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:anthony.beca@queensu.com">anthony.beca@queensu.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/anthonybeca/">linkedin.com/in/anthonybeca</a></p>
-    </footer>
 
-    <script src="js/script.js"></script>
+<!-- Contact Section -->
+<footer>
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:anthony.beca@queensu.com">anthony.beca@queensu.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/anthonybeca/">linkedin.com/in/anthonybeca</a></p>
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
