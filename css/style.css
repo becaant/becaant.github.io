@@ -2,6 +2,14 @@
     font-family: Montserrat, sans-serif;
 }
 
+/* Colours
+#0d1b2a
+#1b263b
+#415a77
+#778da9
+#e0e1dd
+*/
+
 body {
     line-height: 1.6;
     background-color: #0d1b2a;
@@ -58,13 +66,13 @@ header, footer {
 
 .home-role {
     display: inline-block;
-    color: #4CAF50; /* Change this to your desired color */
+    color: white; /* Change this to your desired color */
     margin-right: 5px; /* Space between role and place */
 }
 
 .home-place {
     display: inline-block;
-    color: #2196F3; /* Change this to your desired color */
+    color: #778da9; /* Change this to your desired color */
     text-decoration: none; /* Remove underline from the link */
 }
 
@@ -193,6 +201,14 @@ figcaption {
     border-radius: 8px;
 }
 
+.project-text h1 {
+    font-size: 60px;
+    font-weight: bold;
+    justify-content: left;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
@@ -201,8 +217,8 @@ figcaption {
 }
 
 .project {
-    background-color: #f9f9f9; /* Background color for project items */
-    border: 1px solid #ccc; /* Border around project items */
+    background-color: #415a77; /* Background color for project items */
+    border: 1px solid #415a77; /* Border around project items */
     border-radius: 8px; /* Rounded corners */
     padding: 10px; /* Padding inside project items */
     text-align: center; /* Center the text */
@@ -211,6 +227,8 @@ figcaption {
 .project img {
     width: 100%; /* Make images responsive */
     height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 11/7;
+    object-fit: cover; /* Maintain aspect ratio and fill the area */
     border-radius: 8px; /* Rounded corners for images */
 }
 
@@ -218,14 +236,14 @@ figcaption {
     display: inline-block; /* Button-like appearance */
     margin-top: 10px; /* Space above the link */
     padding: 10px 15px; /* Padding for link */
-    background-color: #007BFF; /* Background color for the button */
+    /* background-color: #007BFF; Background color for the button */
     color: white; /* Text color */
     text-decoration: none; /* No underline */
     border-radius: 5px; /* Rounded corners */
 }
 
 .project-link:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #0d1b2a; /* Darker shade on hover */
 }
 
 
