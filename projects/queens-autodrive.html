@@ -20,7 +20,7 @@
 
     <!-- Project Image -->
     <section id="project-image">
-        <img src="../assets/qa-team-photo.jpeg" alt="Team Photo" class="project-image">
+        <img src="../assets/autodrive/qa-team-photo.jpeg" alt="Team Photo" class="project-image">
         <figcaption>Queen's AutoDrive takes on MCity; Summer 2024</figcaption>
     </section>
 
@@ -34,7 +34,7 @@
             <div class="center-video">
                 <figure>
                     <video width="640" height="360" controls>
-                        <source src="../assets/qa-autodriving.mp4" type="video/mp4">
+                        <source src="../assets/autodrive/qa-autodriving.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <figcaption>Autonomous driving at MCity.</figcaption>
@@ -48,15 +48,66 @@
         <h2>Design & Implementation</h2>
         <p>
             This project requires expertise from all facets of robotics; perception, control, planning, hardware design, vehicle interfacing, integration, and more.
+            
+            <div class="center-image">
+                <figure>
+                    <img src="../assets/autodrive/software_flow_chart.jpg" alt="System Architecture">
+                    <figcaption>Block Diagram of system architecture.</figcaption>
+                </figure>
+            </div>
 
             To ensure the success of such an interconnected project, I conducted three full-day design reviews to put our members on the hot seat, it was here that we all became familiar with each others progress, what worked and what didn't.
             <div class="center-image">
                 <figure>
-                    <img src="../assets/qa-dr2.png" alt="Design Review 2">
+                    <img src="../assets/autodrive/qa-dr2.png" alt="Design Review 2">
                     <figcaption>Team Photo at Design Review 2.</figcaption>
                 </figure>
             </div>
         </p>
+    </section>
+
+    <!-- Results and Analysis -->
+    <section id="what-did-i-work-on">
+        <h2>What Did I Work On?</h2>
+        In addition to Project Management, system design, and administrative duties, I undertook numerous technical projects that were critical to the success of the team
+        <div class="project-grid">
+            <div class="project">
+                <img src="../assets/autodrive/LC_Polar_irl.png" alt="LiDAR-Camera Overlay">
+                <h3>LiDAR-Camera Fusion</h3>
+                <p>How can we tell the 3D position of detected objects with camera-based detections, and LiDAR data? I implemented a novel approach to this problem for a 3-LiDAR, 4-camera system with ±15 cm longitunal error at 40m range, at 90 Hz</p>
+                <!-- <a href="projects/lidar-camera-fusion.html" class="project-link">Learn more</a> -->
+            </div>
+            <div class="project">
+                <img src="../assets/autodrive/MCity.jpg" alt="AV Global Planner">
+                <h3>Autonomous Vehicle Global Planner</h3>
+                <p>Given a start and end pose, how can we use map and incoming perception data to determine where to drive (legally, of course)? Built on the Lanelet2 library, I developed a parser for the HD map, real-timme localization within lane segments, shortest path routing, and ROS2 transmission of path information. Written in Python, with ROS2; this planner worked first try on the vehicle.</p>
+                <!-- <a href="projects/global-planner.html" class="project-link">Learn more</a> -->
+            </div>
+            <div class="project">
+                <img src="../assets/autodrive/ros2.webp" alt="Full Stack Integration">
+                <h3>Full Stack Integration</h3>
+                <p>As the Technical Lead in Year II, I was responsible for the ROS2 integration of 11 single-points-of-failure across all systems with Python, ROS2</p>
+                <!-- <a href="projects/global-planner.html" class="project-link">Learn more</a> -->
+            </div>
+            <div class="project">
+                <img src="../assets/autodrive/Autodrive_Workshop_24_1085.jpeg" alt="Static Deliverables">
+                <h3>Presentations and Reports</h3>
+                <p>As Team Captain, I was the principal author for:</p>
+                <p>Project Leadership Report (4th), Concept Design Report (4th), Software Requirements Specifications (5th).
+                </p>
+
+                <p>I was also a principal speaker for: </p>
+                <p>Project Leadership Event (4th), Mobility Innovation (4th), Concept Design Event (2.5/100 behind 3rd). 
+                </p>
+                <!-- <a href="projects/global-planner.html" class="project-link">Learn more</a> -->
+            </div>
+            <div class="project">
+                <img src="../assets/autodrive/v2x.png" alt="V2X Challenge">
+                <h3>V2X Challenge</h3>
+                <p>Placing first in the V2X Challenge Part I, I worked with a partner to parse and decode MAP and SPAT messages in Python, and transmit the data encoded as CAN messages per a custom .dbc</p>
+                <!-- <a href="projects/global-planner.html" class="project-link">Learn more</a> -->
+            </div>
+        </div>
     </section>
 
     <!-- Results and Analysis -->

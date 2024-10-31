@@ -10,7 +10,7 @@
 
     <!-- Header Section -->
     <header>
-        <h1>Project Title</h1>
+        <h1>Path Following Control of Motor Graders</h1>
         <nav>
             <a href="../index.html">Home</a> |
             <a href="../cv.html">Resume</a> |
@@ -20,9 +20,13 @@
 
     <!-- Project Image -->
     <section id="project-image">
-        <img src="../assets/IMG_1941.jpeg" alt="Josh and I at MacLean's Collingwood office." class="project-image">
-        <p>Josh and I at MacLean's Collingwood office.</p>
-    </section>
+        <div class="center-image">
+            <figure>
+                <img src="../assets/grader/IMG_1941.jpeg" alt="Josh and I at MacLean's Collingwood office." class="project-image">
+        <figcaption>Josh and I at MacLean's Collingwood office.</figcaption>
+            </figure>
+        </div>
+        </section>
 
     <!-- Project Overview -->
     <section id="project-overview">
@@ -31,25 +35,33 @@
             Motor graders play in a crucial role in the efficient operation of any mining operation, especially in underground applications. The moldboard (blade) passes over the ground to smooth uneven terrain so other vehicles can operate under nominal conditions.
 
             However, to position the blade in all orientations required on site, motor graders have highly redundant kinematics for moldboard control, as well as driving. As a result, graders are the last stalwart to full mine automation. Multiple times a day, autonomous mining zones must be shut down so a human operator can grade the path. But with 4 driving inputs (speed, articulation angle, steering angle, wheel pitch), and 5 moldboard inputs, manual grading is often inefficient.
-
+        </p>
+        <p> 
             For this project, under the supervision of Dr. Joshua Marshall @ Offroad Robotics, I derived two path following control schemes for motor graders. I derived the vehicle kinematics and feedback linearization (FBL) for each, and applied FBL+PD, FBL+MPC, and NMPC path following control, simulated with Python. See the Abstract in Inquiry@Queen's Undergraduate Research Conference Proceedings (<a href="https://doi.org/10.24908/iqurcp18056">https://doi.org/10.24908/iqurcp18056</a>)
         </p>
     </section>
 
     <!-- Design and Implementation -->
-    <!-- <section id="design-implementation">
-        <h2>Design & Implementation</h2>
-        <p>
-            Detailed description of how the project was designed and implemented. Discuss the approach, methods used, and any significant design decisions. Include relevant challenges faced and how they were overcome.
-        </p>
-    </section> -->
-
-    <!-- Results and Analysis -->
-    <section id="results-analysis">
+    <section id="design-implementation">
         <h2>Results & Analysis</h2>
+        <h3> Vehicle Kinematics</h3>
+            <p>First derivation of vehicle kinematics for motor graders</p>
+            <div class="center-image">
+                <figure>
+                    <img src="../assets/grader/kinematics.png" alt="Kinematics">
+                    <figcaption>Kinematic model of the GR5.</figcaption>
+                </figure>
+            </div>
+        <h3> Feedback Linearization Scheme</h3>
+            <p>Derivation of feedback linearized error dynamics for two path following schemes (proprietary).</p>
+        <h3> Path Following Controller Implementation</h3>
+            <p>Three controllers were implemented for path following control: FBL+PD, FBL+MPC Optimization 1, FBL+MPC Optimization 2</p>
+        <h3> Numerical Tuning of Control System </h3>
+            <p></p>
+
         <p>
             <video width="640" height="360" controls>
-                <source src="../assets/FBL+MPC-sim.mp4" type="video/mp4">
+                <source src="../assets/grader/FBL+MPC-sim.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             Both control schemes were effective, above is a demonstration of the FBL+MPC implementation. This work was presented to MacLean Engineering's Advanced Vehicles team, concepts are likely to be included in future grader autonomy efforts.
