@@ -10,26 +10,28 @@
 
     <!-- Header Section -->
     <header>
-        <h1>Queen's AutoDrive</h1>
-        <nav>
-            <a href="../index.html">Home</a> |
-            <a href="../cv.html">Resume</a> |
-            <a href="../contact.html">Contact</a>
-        </nav>
+        <div class="button-container">
+            <a href="../index.html" class="animated-button">Home</a>
+            <a href="../projects.html" class="animated-button">Projects</a>
+            <a href="../cv.html" class="animated-button">Resume/CV</a>
+            <a href="../mailto:your-email@example.com" class="animated-button">Contact</a>
+        </div>
     </header>
 
-    <!-- Project Image -->
-    <section id="project-image">
-        <img src="../assets/autodrive/qa-team-photo.jpeg" alt="Team Photo" class="project-image">
-        <figcaption>Queen's AutoDrive takes on MCity; Summer 2024</figcaption>
-    </section>
-
     <!-- Project Overview -->
-    <section id="project-overview">
+    <div class="text-content">
+        <h1>Queen's AutoDrive</h1>
+        <div class="center-image">
+            <figure>
+                <img src="../assets/autodrive/qa-team-photo.jpeg" alt="Team Photo." class="project-image">
+                <figcaption>Queen's AutoDrive takes on MCity; Summer 2024</figcaption>
+            </figure>
+        </div>
         <h2>Project Overview</h2>
         <p>
             It's hard to summarize the profound effect Queen's AutoDrive has had on me as an individual. From data labeller to system integration lead, to technical lead, and finally to team captain, this team has defined my undergraduate career.
-
+        </p>
+        <p>
             In a nutshell, we compete annually as part of the GM-SAE AutoDrive Challenge II international competition to develop an SAE-level 4 autonomous vehicle. Given a Chevrolet Bolt, and top-of-the-line equipment, we are left to our devices to make it happen. Year III was marked with significant adversity - starting from scratch, with an all-new team, and any team's nightmare incident - we came together as a 90-person unit to get our car to drive autonomously when it counted. Ultimately, we were awarded $1,000 for placing 3rd in the Intersection Challenge, I hope the video below conveys our excitement to you!
             <div class="center-video">
                 <figure>
@@ -44,7 +46,7 @@
     </section>
 
     <!-- Design and Implementation -->
-    <section id="design-implementation">
+    <div id="text-content">
         <h2>Design & Implementation</h2>
         <p>
             This project requires expertise from all facets of robotics; perception, control, planning, hardware design, vehicle interfacing, integration, and more.
@@ -64,10 +66,10 @@
                 </figure>
             </div>
         </p>
-    </section>
+    </div>
 
     <!-- Results and Analysis -->
-    <section id="what-did-i-work-on">
+    <div id="text-content">
         <h2>What Did I Work On?</h2>
         In addition to Project Management, system design, and administrative duties, I undertook numerous technical projects that were critical to the success of the team
         <div class="project-grid">
@@ -80,14 +82,7 @@
             <div class="project">
                 <img src="../assets/autodrive/MCity.jpg" alt="AV Global Planner">
                 <h3>Autonomous Vehicle Global Planner</h3>
-                <p>Given a start and end pose, how can we use map and incoming perception data to determine where to drive (legally, of course)? Built on the Lanelet2 library, I developed a parser for the HD map, real-timme localization within lane segments, shortest path routing, and ROS2 transmission of path information. Written in Python, with ROS2; this planner worked first try on the vehicle.</p>
-                <!-- <a href="projects/global-planner.html" class="project-link">Learn more</a> -->
-            </div>
-            <div class="project">
-                <img src="../assets/autodrive/ros2.webp" alt="Full Stack Integration">
-                <h3>Full Stack Integration</h3>
-                <p>As the Technical Lead in Year II, I was responsible for the ROS2 integration of 11 single-points-of-failure across all systems with Python, ROS2</p>
-                <!-- <a href="projects/global-planner.html" class="project-link">Learn more</a> -->
+                <p>Built on the Lanelet2 library, I developed a parser for the HD map, real-time localization within lane segments, shortest path routing, and ROS2 transmission of path information. Written in Python, with ROS2; this planner worked first try on the vehicle.</p>
             </div>
             <div class="project">
                 <img src="../assets/autodrive/Autodrive_Workshop_24_1085.jpeg" alt="Static Deliverables">
@@ -102,13 +97,25 @@
                 <!-- <a href="projects/global-planner.html" class="project-link">Learn more</a> -->
             </div>
             <div class="project">
+                <img src="../assets/autodrive/ros2.webp" alt="Full Stack Integration">
+                <h3>Full Stack Integration</h3>
+                <p>As the Technical Lead in Year II, I was responsible for the ROS2 integration of 11 single-points-of-failure across all systems with Python, ROS2. 
+                </p> 
+                <p>From drivers, to raw data, to detections, to planner, to controllers, to CAN.</p>
+                <!-- <a href="projects/global-planner.html" class="project-link">Learn more</a> -->
+            </div>
+            <div class="project">
                 <img src="../assets/autodrive/v2x.png" alt="V2X Challenge">
                 <h3>V2X Challenge</h3>
                 <p>Placing first in the V2X Challenge Part I, I worked with a partner to parse and decode MAP and SPAT messages in Python, and transmit the data encoded as CAN messages per a custom .dbc</p>
-                <!-- <a href="projects/global-planner.html" class="project-link">Learn more</a> -->
+            </div>
+            <div class="project">
+                <img src="../assets/autodrive/blue_lights.jpg" alt="Blue Lights">
+                <h3>Autonomous Mode Warning Lights</h3>
+                <p>Developed Autonomous Mode indicator via CAN with Arduino microcontroller. Based on AV readiness, and status of safety modes, controlled the blue light autonomous mode indicators.</p>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Results and Analysis -->
     <section id="results-analysis">
@@ -123,14 +130,6 @@
         </ul>
     </section>
 
-    <!-- Future Improvements -->
-    <section id="future-improvements">
-        <h2>Future Improvements</h2>
-        <p>
-            Ideas or suggestions for how the project could evolve. Include any plans to improve features, add functionality, or explore other applications.
-        </p>
-    </section>
-
     <!-- Software and Hardware Skills -->
     <section id="skills">
         <h2>Skills Used</h2>
@@ -138,18 +137,21 @@
             <div class="skills-subsection">
                 <h3>Software Skills</h3>
                 <ul>
-                    <li>Programming Language 1</li>
-                    <li>Framework or Tool 2</li>
-                    <li>Software 3</li>
+                    <li>Python</li>
+                    <li>ROS2</li>
+                    <li>LiDAR-camera fusion</li>
+                    <li>LaTeX</li>
+                    <li>CAN</li>
+                    <li>V2X/PyCrate</li>
                     <!-- Add more as necessary -->
                 </ul>
             </div>
             <div class="skills-subsection">
                 <h3>Hardware Skills</h3>
                 <ul>
-                    <li>Hardware Component 1</li>
-                    <li>Device 2</li>
-                    <li>Tool or Equipment 3</li>
+                    <li>Sensor mount design</li>
+                    <li>CAD</li>
+                    <li>Hardware installation</li>
                     <!-- Add more as necessary -->
                 </ul>
             </div>
@@ -159,7 +161,7 @@
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Anthony Beca</p>
-        <p><a href="../contact.html">Contact Me</a></p>
+        <p><a href="../mailto:your-email@example.com">Contact Me</a></p>
     </footer>
 
 </body>

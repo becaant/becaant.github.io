@@ -4,32 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Path Following Control of Motor Graders</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
     <!-- Header Section -->
     <header>
-        <h1>Path Following Control of Motor Graders</h1>
-        <nav>
-            <a href="../index.html">Home</a> |
-            <a href="../cv.html">Resume</a> |
-            <a href="../contact.html">Contact</a>
-        </nav>
+        <div class="button-container">
+            <a href="../index.html" class="animated-button">Home</a>
+            <a href="../projects.html" class="animated-button">Projects</a>
+            <a href="../cv.html" class="animated-button">Resume/CV</a>
+            <a href="../mailto:your-email@example.com" class="animated-button">Contact</a>
+        </div>
     </header>
 
-    <!-- Project Image -->
-    <section id="project-image">
+    <!-- Project Overview -->
+    <!-- <section id="project-overview"> -->
+    <div class="text-content">
+        <h1>Path Following Control of Motor Graders</h1>
         <div class="center-image">
             <figure>
                 <img src="../assets/grader/IMG_1941.jpeg" alt="Josh and I at MacLean's Collingwood office." class="project-image">
-        <figcaption>Josh and I at MacLean's Collingwood office.</figcaption>
+                <figcaption>Dr. Marshall and I at MacLean's Collingwood office.</figcaption>
             </figure>
         </div>
-        </section>
-
-    <!-- Project Overview -->
-    <section id="project-overview">
         <h2>Project Overview</h2>
         <p>
             Motor graders play in a crucial role in the efficient operation of any mining operation, especially in underground applications. The moldboard (blade) passes over the ground to smooth uneven terrain so other vehicles can operate under nominal conditions.
@@ -39,13 +38,14 @@
         <p> 
             For this project, under the supervision of Dr. Joshua Marshall @ Offroad Robotics, I derived two path following control schemes for motor graders. I derived the vehicle kinematics and feedback linearization (FBL) for each, and applied FBL+PD, FBL+MPC, and NMPC path following control, simulated with Python. See the Abstract in Inquiry@Queen's Undergraduate Research Conference Proceedings (<a href="https://doi.org/10.24908/iqurcp18056">https://doi.org/10.24908/iqurcp18056</a>)
         </p>
-    </section>
+    </div>
+    <!-- </section> -->
 
     <!-- Design and Implementation -->
-    <section id="design-implementation">
+    <div class="text-content">
         <h2>Results & Analysis</h2>
         <h3> Vehicle Kinematics</h3>
-            <p>First derivation of vehicle kinematics for motor graders</p>
+            <p>I derived non-holonomic vehicle kinematics for motor graders, notice that there are two steering inputs: front wheel steering angle, and articulation angle. This overactuation poses unique design challenges to determine optimality of control.</p>
             <div class="center-image">
                 <figure>
                     <img src="../assets/grader/kinematics.png" alt="Kinematics">
@@ -53,43 +53,65 @@
                 </figure>
             </div>
         <h3> Feedback Linearization Scheme</h3>
-            <p>Derivation of feedback linearized error dynamics for two path following schemes (proprietary).</p>
+            <p>Ultimately, two proprietary control schemes were developed, and path following feedback linearized error dynamics were derived.</p>
         <h3> Path Following Controller Implementation</h3>
             <p>Three controllers were implemented for path following control: FBL+PD, FBL+MPC Optimization 1, FBL+MPC Optimization 2</p>
+            <div class="project-grid">
+                <div class="project">
+                    <img src="../assets/grader/FBL+PD.png" alt="MacLean GR5 Motor Grader">
+                    <h3>Path Following Control of Motor Graders</h3>
+                    <p>FBL+PD control, rmse=1280</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <img src="../assets/grader/FBL_MPC1.png" alt="MacLean GR5 Motor Grader">
+                    <h3>Path Following Control of Motor Graders</h3>
+                    <p>FBL+MPC control, optimization 1 rmse=294</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <img src="../assets/grader/FBL_MPC2.png" alt="MacLean GR5 Motor Grader">
+                    <h3>Path Following Control of Motor Graders</h3>
+                    <p>FBL+MPC control, optimization 2 rmse=289</p>
+                    </a>
+                </div>
+            </div>
         <h3> Numerical Tuning of Control System </h3>
-            <p></p>
+            <p>
+                As the relationship between the tuned feedback linearized error system and the performance of the non-linear kinematic model has not been analytically studied for non-holonomic systems, a numerical approach was taken to randomly sample the control parameter space (damping ratio and natural frequency for PD, p, Q, R for MPC).
+                <div class="center-image">
+                    <img src="../assets/grader/fblpd_1000iter_zoomed.png">
+                    <figcaption>Optimization space for the PD controller, obtained via latin hypercube sampling</figcaption>
+                </div>
+            </p>
 
         <p>
-            <video width="640" height="360" controls>
-                <source src="../assets/grader/FBL+MPC-sim.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+
             Both control schemes were effective, above is a demonstration of the FBL+MPC implementation. This work was presented to MacLean Engineering's Advanced Vehicles team, concepts are likely to be included in future grader autonomy efforts.
         </p>
-    </section>
+    </div>
 
     <!-- Future Improvements -->
-    <section id="future-improvements">
+    <div class="text-content">
         <h2>Future Improvements</h2>
         <p>
             There are two open areas for the path following control. First, the fidelity of the model can be increased to incorporate dynamics, ground-tire interaction, etc. Second, ongoing work to analytically determine the effect of tuning FBL systems applied to nonlinear control.
         </p>
-    </section>
+    </div>
 
     <!-- Takeaways -->
-    <section id="takeaways">
+    <div class="text-content">
         <h2>Takeaways</h2>
         <p>
             This project opened my eyes to what it means to be a researcher. It has driven me down the course of controls and state estimation as a future research direction, and most importantly, has shown me my capacity to learn. I owe a debt of gratitude to Dr. Marshall, Offroad Robotics, and the Ingenuity Labs Research Institute for the opportunity and the environment to grow as much as I did over the summer term.
         </p>
-    </section>
+    </div>
 
     <!-- Software and Hardware Skills -->
     <section id="skills">
-        <h2>Skills Used</h2>
         <div class="skills-section">
             <div class="skills-subsection">
-                <h3>Skills</h3>
+                <h2>Skills</h2>
                 <ul>
                     <li>Vehicle Kinematics</li>
                     <li>Control Theory</li>
@@ -103,7 +125,7 @@
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Anthony Beca</p>
-        <p><a href="../contact.html">Contact Me</a></p>
+        <p><a href="../mailto:your-email@example.com">Contact Me</a></p>
     </footer>
 
 </body>

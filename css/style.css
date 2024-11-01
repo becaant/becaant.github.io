@@ -7,13 +7,13 @@
 #1b263b
 #415a77
 #778da9
-#e0e1dd
+##e0e1dd
 */
 
 body {
     line-height: 1.6;
     background-color: #0d1b2a;
-    color: white;
+    color: #e0e1dd;
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom, #0d1b2a, #415a77); /* Dark blue to lighter blue */
@@ -24,7 +24,7 @@ header, footer {
     text-align: center;
     padding: 20px;
     background-color: #0d1b2a;
-    color: white;
+    color: #e0e1dd;
 }
 
 .container {
@@ -53,7 +53,7 @@ header, footer {
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: white;
+    color: #e0e1dd;
     margin-bottom: 20px;
 }
 
@@ -66,7 +66,7 @@ header, footer {
 
 .home-role {
     display: inline-block;
-    color: white; /* Change this to your desired color */
+    color: #e0e1dd; /* Change this to your desired color */
     margin-right: 5px; /* Space between role and place */
 }
 
@@ -104,7 +104,6 @@ header, footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-
 header h1, footer p {
     margin: 0;
 }
@@ -127,7 +126,7 @@ header h1, footer p {
 }
 
 nav a {
-    color: white;
+    color: #e0e1dd;
     text-decoration: none;
     padding: 0 10px;
 }
@@ -160,7 +159,7 @@ figcaption {
     text-align: center;
     font-style: italic;
     margin-top: 5px;
-    color: #555; /* Change color as desired */
+    color: #e0e1dd; /* Change color as desired */
 }
 
 .button-container {
@@ -227,7 +226,7 @@ figcaption {
 .project img {
     width: 100%; /* Make images responsive */
     height: auto; /* Maintain aspect ratio */
-    aspect-ratio: 11/7;
+    aspect-ratio: 12/7;
     object-fit: cover; /* Maintain aspect ratio and fill the area */
     border-radius: 8px; /* Rounded corners for images */
 }
@@ -237,13 +236,44 @@ figcaption {
     margin-top: 10px; /* Space above the link */
     padding: 10px 15px; /* Padding for link */
     /* background-color: #007BFF; Background color for the button */
-    color: white; /* Text color */
+    color: #e0e1dd; /* Text color */
     text-decoration: none; /* No underline */
     border-radius: 5px; /* Rounded corners */
 }
 
 .project-link:hover {
     background-color: #0d1b2a; /* Darker shade on hover */
+}
+
+.text-content {
+    max-width: 80%;
+    /* display: flex; */
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 10%;
+    color: #e0e1dd; /* Text color */
+}
+
+.text-content h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    color: #e0e1dd; /* Header color */
+    margin-bottom: 10px;
+}
+
+.text-content h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #e0e1dd; /* Header color */
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #e0e1dd; /* Body text color */
+    margin-bottom: 15px;
 }
 
 .skills-section {
@@ -257,7 +287,7 @@ figcaption {
 }
 
 .skills-subsection h3 {
-    color: #0066cc;
+    color: #e0e1dd;
     margin-bottom: 10px;
 }
 
@@ -267,7 +297,7 @@ figcaption {
 }
 
 .skills-subsection li {
-    background: #f1f1f1;
+    background: #0d1b2a;
     padding: 5px;
     margin: 5px 0;
     border-radius: 5px;
