@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiDAR-Camera Fusion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="button-container">
+            <a href="../index.html" class="animated-button">Home</a>
+            <a href="../projects.html" class="animated-button">Projects</a>
+            <a href="../cv.html" class="animated-button">Resume/CV</a>
+            <a href="../mailto:anthony.beca@queensu.ca" class="animated-button">Contact</a>
+        </div>
+    </header>
+
+    <!-- Project Overview -->
+    <!-- <section id="project-overview"> -->
+    <div class="text-content">
+        <h1>LiDAR-Camera Fusion</h1>
+        <div class="center-image">
+            <figure>
+                <img src="../assets/autodrive/LC_Polar_irl.png" alt="Visualized output" class="project-image">
+                <figcaption>Example of LiDAR-Camera fusion.</figcaption>
+            </figure>
+        </div>
+        <h2>Project Overview</h2>
+        <p>
+            I designed the LiDAR-Camera overlay system for the Year II and III iterations. The goal of the system is to obtain the 3D relative position of detected objects. The system takes asynchronously as input 4x images at 15 Hz, 3x point clouds (2x at 15 Hz, 1x at 30 Hz), GNSS data at 80 Hz. The system must not be a bottleneck to the full-stack performance of 10 Hz, so the goal was to achieve 25 Hz.
+        </p>
+        <p>
+            The previous implementation was based on projecting each point in each point cloud into the image plane. Although ±15 cm lateral error was obtained, this approach is not efficient.
+        </p>
+        <p>
+            Instead, the novel approach is based on finding a polar relationship between the camera and LiDAR data, reducing the subset of points to be projected, similar to passing a plane in front of a projector. To achieve this, camera instrinsics inform the focal length and center of the image plane (distinct from the image itself). Applying trigonometry, the vector field passing from the lens to the region of interest can be determined as rotations from the x and y axes. Transforming the point cloud to the lens with the extrinsic parameters, the data can be filtered to a region satisfying the polar constraints.
+        </p>
+        <div class="center-image">
+            <figure>
+                <img src="../assets/autodrive/lc-concept.png" alt="LiDAR-Camera concept" class="project-image">
+                <figcaption>Polar Overlay Concept.</figcaption>
+            </figure>
+        </div>
+    </div>
+    <!-- </section> -->
+
+    <!-- Design and Implementation -->
+    <div class="text-content">
+        <h2>Implementation</h2>
+        <p>
+            The system, described below maintained a ±15cm lateral error, attributed to errors in the extrinsic parameters, but improved to 60Hz operation. The Approximate Time Synchronizer Module pairs images with the most relevant point cloud, and the delta is used in conjuction with the current velocity from the GNSS to 'timeshift' the LiDAR frame to the camera frame.
+        </p>
+        <div class="center-image">
+            <figure>
+                <img src="../assets/autodrive/lc-sa.jpg" alt="LiDAR-Camera system architecture" class="project-image">
+                <figcaption>LiDAR-Camera overlay system architecture.</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="text-content">
+        <h2>Year II Implementation</h2>
+        <p>
+            On a month notice, the sensor suite and LiDAR-camera system was redone from scratch. As previously mentioned, the previous implementation projects all LiDAR points into each images at each sample.
+        </p>
+        <div class="center-image">
+            <figure>
+                <img src="../assets/autodrive/lc-y2-results.png" alt="LiDAR-Camera year ii" class="project-image">
+                <figcaption>LiDAR-Camera overlay Year II results.</figcaption>
+            </figure>
+        </div>
+        <p>
+            I also designed and fabricated a sensor suite in the same span. It was a conscious design choice to have all sensors aligned vertically to decrease lead time, suite complexity, and extrinsic extraction.
+        </p>
+        <div class="center-image">
+            <figure>
+                <img src="../assets/autodrive/sensor-suite.png" alt="sensor suite" class="project-image">
+                <figcaption>Year 2 sensor suite.</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <!-- Takeaways -->
+    <!-- <div class="text-content">
+        <h2>Takeaways</h2>
+        <p>
+        </p>
+    </div> -->
+
+    <!-- Software and Hardware Skills -->
+    <section id="skills">
+        <div class="skills-section">
+            <div class="skills-subsection">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Python</li>
+                    <li>ROS2</li>
+                    <li>Linux/Ubuntu/Bash</li>
+                    <li>Git</li>
+                    <li>Image Processing</li>
+                    <li>LiDAR Processing</li>
+                    <li>Sensor Fusion</li>
+                    <li>CAD/SOLIDWORKS</li>
+                    <!-- Add more as necessary -->
+                </ul>          
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Anthony Beca</p>
+        <p>
+            <a href="https://www.linkedin.com/in/anthonybeca/" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:anthony.beca@queensu.com" class="social-icon">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </p>
+    </footer>
+
+    <button onclick="scrollToTop()" id="backToTopBtn">↑</button>
+    <script src="../js/script.js"></script>
+</body>
+</html>

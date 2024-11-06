@@ -3,88 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Title - Anthony Beca Portfolio</title>
+    <title>AV Global Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
     <!-- Header Section -->
     <header>
-        <h1>Project Title</h1>
-        <nav>
-            <a href="../index.html">Home</a> |
-            <a href="../cv.html">Resume</a> |
-            <a href="../mailto:your-email@anthony.beca@queensu.ca">Contact</a>
-        </nav>
+        <div class="button-container">
+            <a href="../index.html" class="animated-button">Home</a>
+            <a href="../projects.html" class="animated-button">Projects</a>
+            <a href="../cv.html" class="animated-button">Resume/CV</a>
+            <a href="../mailto:anthony.beca@queensu.ca" class="animated-button">Contact</a>
+        </div>
     </header>
 
-    <!-- Project Image -->
-    <section id="project-image">
-        <img src="../assets/GR5.jpg" alt="Image of Project X" class="project-image">
-    </section>
-
     <!-- Project Overview -->
-    <section id="project-overview">
+    <!-- <section id="project-overview"> -->
+    <div class="text-content">
+        <h1>AV Global Planner</h1>
+        <div class="center-image">
+            <figure>
+                <img src="../assets/autodrive/gp-photo.jpeg" alt="Photo." class="project-image">
+                <figcaption>In the driver's seat at MCity, practice run.</figcaption>
+            </figure>
+        </div>
         <h2>Project Overview</h2>
         <p>
-            Brief description of the project. This can include information on the objectives, inspiration, or problem the project addresses. It provides a summary of the project’s importance and purpose.
+            A Lanelet2 based global planner implemented with Python and ROS2. This module uses the A* algorithm to return the shortest path between two lane segments, localizes the egovehicle to  segment, and cancels obstructed routes in real time.
         </p>
-    </section>
-
-    <!-- Design and Implementation -->
-    <section id="design-implementation">
-        <h2>Design & Implementation</h2>
         <p>
-            Detailed description of how the project was designed and implemented. Discuss the approach, methods used, and any significant design decisions. Include relevant challenges faced and how they were overcome.
+            I developed a parsing script to read the HD map data and convert to Lanelet format, resolving many map conflicts/incompletions.
         </p>
-    </section>
+        <div class="center-image">
+            <figure>
+                <img src="../assets/autodrive/segment-map.png" alt="lane segment map." class="project-image">
+                <figcaption>Lane segment map, MCity.</figcaption>
+            </figure>
+        </div>
+        <p>
+            The segment graph is searched to obtain the shortest path, and all centerline points within n+2 segments are packaged and transmitted via ROS2 to the trajectory tracking module.
+        </p>
+        <p>
+            The current GNSS position is converted to UTM frame, and used to determine the current occupancy of the egovehicle and all detected objects (3D position from LiDAR-camera overlay module).
+        </p>
+    </div>
+    <!-- </section> -->
 
     <!-- Results and Analysis -->
-    <section id="results-analysis">
+    <div class="text-content">
         <h2>Results & Analysis</h2>
-        <p>
-            Discuss the outcomes of the project, including any data, performance metrics, or user feedback. Analyze the success of the project and what could be improved upon in the future.
-        </p>
-    </section>
+        With a significantly reduced timeline, we were able to first test the Autonomy stack 1 month before the competition. Fortunately, the first live test of the global planner integrated with the CAN interface was successful.
+        <div class="center-video">
+            <figure>
+                <video width="640" height="360" controls>
+                    <source src="../assets/autodrive/qa-autodriving.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Autonomous driving at MCity.</figcaption>
+            </figure>
+        </div>
+    </div>
 
     <!-- Future Improvements -->
-    <section id="future-improvements">
+    <div class="text-content">
         <h2>Future Improvements</h2>
         <p>
-            Ideas or suggestions for how the project could evolve. Include any plans to improve features, add functionality, or explore other applications.
+            Better integration with the Lanelet2 graph structure for improved rerouting.
         </p>
-    </section>
+    </div>
+
+    <!-- Takeaways -->
+    <!-- <div class="text-content">
+        <h2>Takeaways</h2>
+        <p>
+        </p>
+    </div> -->
 
     <!-- Software and Hardware Skills -->
     <section id="skills">
-        <h2>Skills Used</h2>
         <div class="skills-section">
             <div class="skills-subsection">
-                <h3>Software Skills</h3>
+                <h2>Skills</h2>
                 <ul>
-                    <li>Programming Language 1</li>
-                    <li>Framework or Tool 2</li>
-                    <li>Software 3</li>
+                    <li>Python</li>
+                    <li>ROS2</li>
+                    <li>Linux/Ubuntu/Bash</li>
+                    <li>Git</li>
+                    <li>Path Planning</li>
+                    <li>Localization</li>
                     <!-- Add more as necessary -->
-                </ul>
-            </div>
-            <div class="skills-subsection">
-                <h3>Hardware Skills</h3>
-                <ul>
-                    <li>Hardware Component 1</li>
-                    <li>Device 2</li>
-                    <li>Tool or Equipment 3</li>
-                    <!-- Add more as necessary -->
-                </ul>
-            </div>
+                </ul>          
         </div>
     </section>
 
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Anthony Beca</p>
-        <p><a href="../mailto:your-email@anthony.beca@queensu.ca">Contact Me</a></p>
+        <p>
+            <a href="https://www.linkedin.com/in/anthonybeca/" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:anthony.beca@queensu.com" class="social-icon">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </p>
     </footer>
 
+    <button onclick="scrollToTop()" id="backToTopBtn">↑</button>
+    <script src="../js/script.js"></script>
 </body>
 </html>

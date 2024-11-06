@@ -9,3 +9,21 @@ window.addEventListener('load', () => {
 //         alert("Project details will be added soon!");
 //     });
 // });
+
+// Show the button when scrolling down
+window.onscroll = function () {
+    const backToTopBtn = document.getElementById("backToTopBtn");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+};
+
+// Smooth scroll to top
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}

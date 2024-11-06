@@ -20,7 +20,7 @@ body {
     min-height: 100vh;
 }
 
-header, footer {
+header {
     text-align: center;
     padding: 20px;
     background-color: #0d1b2a;
@@ -160,6 +160,25 @@ figcaption {
     font-style: italic;
     margin-top: 5px;
     color: #e0e1dd; /* Change color as desired */
+}
+
+#backToTopBtn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    font-size: 25px;
+    background-color: #0d1b2a;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    transition: opacity 0.3s ease;
+}
+
+#backToTopBtn:hover {
+    background-color: #415a77;
 }
 
 .button-container {
@@ -316,7 +335,22 @@ embed {
 }
 
 footer p {
-    margin: 5px 0;
+    margin: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: #415a77;
+}
+
+.social-icon {
+    color: white;
+    text-decoration: none;
+    font-size: 24px; /* Adjust icon size */
+    margin: 0 10px; /* Spacing between icons */
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #0077b5; /* Change to LinkedIn blue or any color on hover */
 }
 
 /* Responsive design for project grid */
