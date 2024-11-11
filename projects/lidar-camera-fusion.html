@@ -36,7 +36,7 @@
         </div>
         <h2>Project Overview</h2>
         <p>
-            I designed the LiDAR-Camera overlay system for the Year II and III iterations. The goal of the system is to obtain the 3D relative position of detected objects. The system takes asynchronously as input 4x images at 15 Hz, 3x point clouds (2x at 15 Hz, 1x at 30 Hz), GNSS data at 80 Hz. The system must not be a bottleneck to the full-stack performance of 10 Hz, so the goal was to achieve 25 Hz.
+            I designed the LiDAR-Camera overlay system for the Year II and III iterations of <a href="https://autodrive.engineering.queensu.ca/" class="home-place">Queen's AutoDrive</a>. The goal of the system is to obtain the 3D relative position of detected objects. The system takes asynchronously as input 4x images at 15 Hz, 3x point clouds (2x at 15 Hz, 1x at 30 Hz), GNSS data at 80 Hz. The system must not be a bottleneck to the full-stack performance of 10 Hz, so the goal was to achieve 25 Hz.
         </p>
         <p>
             The previous implementation was based on projecting each point in each point cloud into the image plane. Although ±15 cm lateral error was obtained, this approach is not efficient.
