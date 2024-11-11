@@ -355,6 +355,7 @@ figcaption {
     width: 100%; /* Full width of the viewport */
     padding-top: 20px;
     padding-bottom: 20px;
+    overflow: hidden; /* Prevents horizontal overflow */
 }
 
 embed {
@@ -410,5 +411,19 @@ footer p {
 @media (max-width: 480px) {
     .project-grid {
         grid-template-columns: 1fr; /* Change to 1 column on very small screens */
+    }
+}
+
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+    .pdf-container {
+        padding-top: 10px; /* Reduce padding for mobile */
+        padding-bottom: 10px;
+    }
+
+    .pdf-container iframe {
+        width: 90%; /* Adjust the width for mobile */
+        height: auto; /* Ensures height scales with width */
     }
 }
