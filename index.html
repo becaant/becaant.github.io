@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anthony Beca - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=cheer" />    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -14,15 +14,23 @@
 <header>
     <div class="button-container">
         <a href="projects.html" class="animated-button">Projects</a>
-        <a href="cv.html" class="animated-button">Resume/CV</a>
+        <a href="cv.html" class="animated-button">CV</a>
         <a href="mailto:anthony.beca@queensu.ca" class="animated-button">Contact</a>
     </div>
 </header>
 
 <body>
+    <video class="background-video" autoplay loop muted playsinline>
+        <source src="assets/bkg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <div class="container">
+        <div class="home-image">
+            <img src="assets/Anthony_Beca_square.jpg" alt="Anthony Beca's Headshot">
+        </div>
         <div class="home-text">
-            <h1>Anthony Beca.</h1>
+            
+            <h1>Anthony Beca</h1>
             <p>
                 <span class="home-role">Robotics Engineering</span> @ 
                 <a href="https://smithengineering.queensu.ca/mre/index" class="home-place">Queen's University</a>
@@ -36,20 +44,18 @@
                 <a href="https://autodrive.engineering.queensu.ca/" class="home-place">Queen's AutoDrive</a>
             </p>
         </div>
-        <div class="home-image">
-            <img src="assets/Anthony_Beca_square.jpg" alt="Anthony Beca's Headshot">
-        </div>
     </div>
 </body>
 <div class="about-me">
     <div class="about-text">
-        <h2>About</h2>
+        <h2>About Me</h2>
         <p>
-            Hello! I'm a motivated Mechatronics and Robotics Engineering student at Queen's University passionate about systems engineering, mobile robotics, and research. Ultimately, I want to work in a world where robots can go places we can't conceive of yet, performing useful tasks we can't conceive yet. I'm impact-driven, value feedback, and love to learn.
+            
+            Hello! 🚀 I'm a motivated Mechatronics and Robotics Engineering student at Queen's University passionate about systems engineering, mobile robotics, and research. I aim to contribute to a future where robotic systems can operate in environments and perform tasks beyond current human capabilities. I’m driven to create measurable impact, value iterative feedback, and thrive on learning.
             <br><br>
-            I consider myself a Robotic Systems Engineer, specifically for Wheeled Mobile Robots. I have had the opportunity to design a novel path following control scheme for  motor graders as part of USRA research at Ingenuity Labs, the pleasure of designing the system architecture for an autonomous vehicle as as Team Captain of Queen's AutoDrive. Additionally, I implemented a global planner scheme for the AV, and fused camera detections with LiDAR data to obtain 3D position of all objects in view. Be it controls, planning, estimation, perception, or integration, I am excited to make it happen.
+            I am a Robotic Systems Engineer, specifically for Wheeled Mobile Robots. I have had the opportunity to design a novel path following control scheme for motor graders as part of USRA research at Ingenuity Labs, the pleasure of designing the system architecture for an autonomous vehicle as as Team Captain of Queen's AutoDrive. 🚗 Additionally, I implemented a global planner scheme for the AV, and fused camera detections with LiDAR data to obtain 3D position of all objects in view. Be it controls, planning, estimation, perception, or integration, I am excited to make it happen.
             <br><br>
-            I am currently looking for Master's (MASc) placements in Canada and the US. My research interests include the systems engineering of mobile robotic systems, with a particular interest in the control/localization/planning of WMRs in complicated environments.
+            I am currently looking for Master's (MASc) placements in Canada and the US. My research interests include the systems engineering of mobile robotic systems, with a particular interest in the control/localization/planning of WMRs in complicated environments. 💡
         </p>
     </div>
 </div>
@@ -58,7 +64,6 @@
 
 <!-- Contact Section -->
 <footer>
-    <p>&copy; 2024 Anthony Beca</p>
     <p>
         <a href="https://www.linkedin.com/in/anthonybeca/" target="_blank" class="social-icon">
             <i class="fab fa-linkedin"></i>
@@ -67,6 +72,7 @@
             <i class="fas fa-envelope"></i>
         </a>
     </p>
+    <!-- <p>&copy; 2024 Anthony Beca</p> -->
 </footer>
 
 <button onclick="scrollToTop()" id="backToTopBtn">↑</button>
