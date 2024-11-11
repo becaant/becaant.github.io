@@ -141,12 +141,6 @@ header h1, footer p {
     padding-right: 20px; /* Add padding to the right of the text */
 }
 
-.headshot img {
-    width: 150px; /* Set the desired width of the headshot */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Optional: make the image circular */
-}
-
 nav a {
     color: #e0e1dd;
     text-decoration: none;
@@ -386,6 +380,24 @@ footer p {
 
 .social-icon:hover {
     color: #0077b5; /* Change to LinkedIn blue or any color on hover */
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+    .center-image img {
+        max-width: 80%; /* Adjust image width for smaller screens */
+        margin: 15px auto; /* Adjust margin for better spacing */
+        border-radius: 5px; /* Reduce border radius for mobile */
+    }
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+    .home-image img {
+        max-width: 90%; /* Adjust to control image size on smaller screens */
+        border-radius: 50px; /* Smaller border radius for mobile */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Adjust shadow intensity for mobile */
+    }
 }
 
 /* Responsive design for project grid */
