@@ -41,19 +41,19 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
+    max-width: 90%;
     margin: 0 auto;
     padding-top: 50px;
 }
 
 .home-text {
     flex: 1;
-    max-width: 600px;
-    margin-left: 100px;
+    max-width: 60%;
+    margin-left: 10%;
 }
 
 .home-text h1 {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bold;
     font-family: Doto;
     margin-bottom: 10px;
@@ -152,10 +152,10 @@ nav a:hover {
 }
 
 .center-image img {
-    max-width: 60%;
+    max-width: 100%;
     height: auto;
-    display: block;
-    margin: 20px auto;
+    display: flex;
+    margin: 10%;
     border-radius: 8px;
 }
 
