@@ -394,6 +394,7 @@ footer p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
     border-radius: 10px;
     max-width: 80%;
+    z-index: 10;
 }
 
 /* Styling the embedded iframe to look like a PDF viewer */
