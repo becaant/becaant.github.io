@@ -151,12 +151,16 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.center-image img {
-    max-width: 100%;
-    height: auto;
+.center-image {
     display: flex;
-    margin: 10%;
-    border-radius: 8px;
+    justify-content: center;  /* Horizontally centers the video */
+    align-items: center;      /* Vertically centers the video */
+    margin: 20px auto;       /* Adds vertical spacing and centers the div */
+}
+
+.center-image img {
+    max-width: 80%;         /* Ensures the video scales responsively */
+    height: auto;            /* Maintains the aspect ratio */
 }
 
 .center-video {

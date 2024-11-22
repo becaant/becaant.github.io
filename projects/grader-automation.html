@@ -30,7 +30,7 @@
         <h1>Path Following Control of Motor Graders</h1>
         <div class="center-image">
             <figure>
-                <img src="../assets/grader/Collingwood.jpeg" alt="Josh and I at MacLean's Collingwood office." class="project-image">
+                <img src="../assets/grader/Collingwood.jpeg" alt="Josh and I at MacLean's Collingwood office." class="center-image">
                 <figcaption>Dr. Marshall and I at MacLean's Collingwood office.</figcaption>
             </figure>
         </div>
@@ -53,7 +53,7 @@
             <p>I derived non-holonomic vehicle kinematics for motor graders, notice that there are two steering inputs: front wheel steering angle, and articulation angle. This overactuation poses unique design challenges to determine optimality of control.</p>
             <div class="center-image">
                 <figure>
-                    <img src="../assets/grader/kinematics.png" alt="Kinematics">
+                    <img src="../assets/grader/kinematics.png" alt="Kinematics" class="center-image">
                     <figcaption>Kinematic model of the GR5.</figcaption>
                 </figure>
             </div>
@@ -85,8 +85,10 @@
             <p>
                 As the relationship between the tuned feedback linearized error system and the performance of the non-linear kinematic model has not been analytically studied for non-holonomic systems, a numerical approach was taken to randomly sample the control parameter space (damping ratio and natural frequency for PD, p, Q, R for MPC).
                 <div class="center-image">
-                    <img src="../assets/grader/fblpd_1000iter_zoomed.png">
+                    <figure>
+                    <img src="../assets/grader/fblpd_1000iter_zoomed.png" class="center-image">
                     <figcaption>Optimization space for the PD controller, obtained via latin hypercube sampling</figcaption>
+                    </figure>
                 </div>
             </p>
 
