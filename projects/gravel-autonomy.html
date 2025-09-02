@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Navigation of Offroad Networks with Satellite Imagery</title>
+     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <video class="background-video" autoplay loop muted playsinline>
+        <source src="../assets/drdc/suf-bkg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- Header Section -->
+    <header>
+        <div class="button-container">
+            <a href="../index.html" class="animated-button">Home</a>
+            <a href="../projects.html" class="animated-button">Projects</a>
+            <a href="../cv.html" class="animated-button"> CV</a>
+            <a href="../mailto:anthony.beca@robotics.utias.utoronto.ca" class="animated-button">Contact</a>
+        </div>
+    </header>
+
+    <!-- Project Overview -->
+    <!-- <section id="project-overview"> -->
+    <div class="text-content">
+        <h1>Autonomous Navigation of Offroad Networks with Satellite Imagery</h1>
+        <div class="center-image">
+            <figure>
+                <img src="../assets/drdc/argo.png" alt="Argo Atlas J8 Platform." class="center-image">
+                <figcaption>Argo Atlas J8 experimental platform <a href="https://arxiv.org/html/2309.09334v2">(Photo)</a>.</figcaption>
+            </figure>
+        </div>
+        <h2>Project Overview</h2>
+        <p>
+            Research conducted at DRDC Suffield, to develop an autonomy solution for the traversal of gravel/dirt road networks for logistics in defense. Critically, it is required that the proposed solution was 1) GPS-denied, as GPS signal can be intercepted or jammed in defense applications, and 2) That prior surveying of the path is not necessary, as the scale of operations is large, surveying can be very expensive (computationally, as well as in terms of manual labour).
+        </p>
+        <div class="center-image">
+            <figure>
+                <img src="../assets/drdc/road-network.png" alt="Example gravel road network." class="center-image">
+                <figcaption>Example Road Network.</figcaption>
+            </figure>
+        </div>
+        <p>
+            To meet these objectives, I designed, implemented, and experimented an approach to correspond annotated satellite imagery with local traversability. In short, a topometric map is referenced for global planning, while LiDAR clouds are segmented as road (traversable; gravel/dirt) or not road (untraversable; grass), and centrelines are extracted. Local centrelines are used as path following input for a feedback linearized controller. Thus, the approach can be thought of as large-scale, line following in semi-structured environments. Further details TBD as the project develops.
+        </p>
+        <p>
+            Compared to other long-term autonomy approaches, ANONSI does not require GPS localization, expert demonstrations, or prior (geometric) maps, instead localizing to an abstracted topometric map representation (edges and nodes). Experiments were conducted on an Argo Atlas J8 platform, with an Ouster OS1 LiDAR, with 2km of autonomous operation on gravel roads.
+        </p>
+    </div>
+    <!-- </section> -->
+
+    <!-- Design and Implementation -->
+    <div class="text-content">
+        <h2>Results & Analysis</h2>
+        <p>
+            In progress
+        </p>
+    </div>
+
+    <!-- Future Improvements -->
+    <div class="text-content">
+        <h2>Future Improvements</h2>
+        <p>
+            In progress
+        </p>
+    </div>
+
+    <!-- Takeaway -->
+    <!-- <div class="text-content">
+        <h2>Takeaway</h2>
+        <p>
+        </p>
+    </div> -->
+
+    <!-- Software and Hardware Skills -->
+    <section id="skills">
+        <div class="skills-section">
+            <div class="skills-subsection">
+                <h2>Skills</h2>
+                <ul>
+                    <li>System Design</li>
+                    <li>ROS2</li>
+                    <li>Machine Learning</li>
+                    <li>Research and Technical Writing</li>
+                    <li>Docker</li>
+                    <li>Field Robotics</li>
+                    <!-- Add more as necessary -->
+                </ul>          
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+         <p>
+            <a href="https://www.linkedin.com/in/anthonybeca/" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:anthony.beca@queensu.com" class="social-icon">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </p>
+    </footer>
+
+    <button onclick="scrollToTop()" id="backToTopBtn">↑</button>
+    <script src="../js/script.js"></script>
+</body>
+</html>
