@@ -3,99 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Projects | Anthony Beca</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+<body>
+
 <header>
-    <div class="button-container">
-        <a href="index.html" class="animated-button">Home</a>
-        <a href="cv.html" class="animated-button"> CV</a>
-        <a href="mailto:anthony.beca@robotics.utias.utoronto.ca" class="animated-button">Contact</a>
-    </div>
-    
+    <nav>
+        <a href="index.html"> Home </a>
+        <a href="projects.html"> Projects </a>
+        <a href="deployments.html"> Deployments </a>
+        <a href="cv.html"> CV </a>
+        <a href="mailto:anthony.beca@robotics.utias.utoronto.ca"> Contact </a>
+    </nav>
 </header>
 
-<body>
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="project-text">
-        <h1>Projects.</h1>
-        </div>
-        <div class="project-grid">
-            <div class="project">
-                <a href="projects/grader-automation.html" class="project-link">
-                <img src="assets/grader/GR5.jpg" alt="MacLean GR5 Motor Grader">
-                <h3>Path Following Control of Motor Graders</h3>
-                <p>Developed and simulated Feedback Linearized control of Motor Graders. USRA research with Dr. Joshua Marshall @ Offroad Robotics</p>
-                </a>
-            </div>
-            <div class="project">
-                <a href="projects/gravel-autonomy.html" class="project-link">
-                <img src="assets/drdc/pronghorn.jpg" alt="Pronghorn on a Gravel Road">
-                <h3>Autonomous Navigation of Gravel Road Networks with Satellite Imagery</h3>
-                <p>Developed and experimented a novel system for offroad autonomy at DRDC Suffield</p>
-                </a>
-            </div>
-            <div class="project">
-                <a href="projects/queens-autodrive.html" class="project-link">
-                <img src="assets/autodrive/AUTODRIVE_24_4685.jpeg" alt="Queen's AutoDrive Car">
-                <h3>Queen's AutoDrive</h3>
-                <p>I was the Team Captain for Year III of Queen's entry to make a Level-4 autonomous vehicle over 5 years. Part of GM-SAE AutoDrive Challenge II Competition</p>
-                </a>
-            </div>
-            <div class="project">
-                <a href="projects/manikin.html" class="project-link">
-                <img src="assets/coursework/modular-manikin.png" alt="Project 5 Image">
-                <h3>Capstone: Modular Medical Manikin</h3>
-                <p>Training manikin for nursing students, torso is swappable for numerous procedures. I'll upload more information as this project develops!</p>
-                </a>
-            </div>
-            <div class="project">
-                <a href="projects/lidar-camera-fusion.html" class="project-link">
-                <img src="assets/autodrive/LC_Polar_irl.png" alt="LiDAR-Camera Overlay">
-                <h3>LiDAR-Camera Fusion</h3>
-                <p>Novel approach to obtain 3D position of objects using camera-based detections fused with LiDAR data. Implemented on a self-driving car</p>
-                </a>
-            </div>
-            <div class="project">
-                <a href="projects/global-planner.html" class="project-link">
-                <img src="assets/autodrive/MCity.jpg" alt="AV Global Planner">
-                <h3>Autonomous Vehicle Global Planner</h3>
-                <p>A ROS2 package to return a legal, traversable path for an AV within a map. Performs planning, lane localization, object localization with respect to path</p>
-                </a>
-            </div>
-            <div class="project">
-                <a href="projects/tronassic-park.html" class="project-link">
-                <img src="assets/coursework/tronassic-park.jpg" alt="Tronassic Park">
-                <h3>Tronassic Park</h3>
-                <p>Custom design, hardware, software, electronics for a mobile robot competition; 3-1 record, Semi-Finals reached</p>
-                </a>
-            </div>
-            <!-- <div class="project">
-                <a href="projects/terraforma.html" class="project-link">
-                <img src="assets/coursework/203-bot.jpg" alt="Terraforma">
-                <h3>Terraforma</h3>
-                <p>Modified Lynx rover to generate heat maps of C02 concentration for indoor environment inspection.</p>
-                </a>
-            </div> -->
-        </div>
+<div class="container">
+
+    <section class="section">
+        <h1>Selected Work</h1>
+        <p>
+            Some robots, etc.
+        </p>
     </section>
 
-    <footer>
-        <!-- <p>&copy; 2024 Anthony Beca</p> -->
-        <p>
-            <a href="https://www.linkedin.com/in/anthonybeca/" target="_blank" class="social-icon">
-                <i class="fab fa-linkedin"></i>
+    <section class="project-grid">
+
+        <div class="project">
+            <a href="projects/grader-automation.html" class="project-link">
+                <img src="assets/grader/GR5.jpg" alt="MacLean GR5 Motor Grader">
+                <h3>Nonlinear Path Following Control for Motor Graders</h3>
+                <p>
+                    Developed and simulated a feedback linearized controller
+                    for articulated motor graders. USRA research under
+                    Dr. Joshua Marshall at Offroad Robotics.
+                </p>
             </a>
-            <a href="mailto:anthony.beca@queensu.com" class="social-icon">
-                <i class="fas fa-envelope"></i>
+        </div>
+
+        <div class="project">
+            <a href="projects/gravel-autonomy.html" class="project-link">
+                <img src="assets/drdc/pronghorn.jpg" alt="Pronghorn on Gravel Road">
+                <h3>Autonomous Navigation of Gravel Road Networks</h3>
+                <p>
+                    Designed and evaluated a satellite-imagery-based autonomy
+                    pipeline for off-road UGV navigation at DRDC Suffield.
+                </p>
             </a>
-        </p>
-    </footer>
-    <button onclick="scrollToTop()" id="backToTopBtn">↑</button>
-    <script src="js/script.js"></script>
+        </div>
+
+        <div class="project">
+            <a href="projects/queens-autodrive.html" class="project-link">
+                <img src="assets/autodrive/AUTODRIVE_24_4685.jpeg" alt="Queen's AutoDrive Vehicle">
+                <h3>Queen's AutoDrive — Team Captain</h3>
+                <p>
+                    Led system integration and autonomy development for a
+                    Level-4 autonomous vehicle as part of the GM–SAE
+                    AutoDrive Challenge II.
+                </p>
+            </a>
+        </div>
+
+        <div class="project">
+            <a href="projects/lidar-camera-fusion.html" class="project-link">
+                <img src="assets/autodrive/LC_Polar_irl.png" alt="LiDAR-Camera Fusion">
+                <h3>LiDAR–Camera Fusion for 3D Object Localization</h3>
+                <p>
+                    Developed a sensor fusion framework combining camera
+                    detections with LiDAR returns for real-time 3D
+                    localization on an autonomous vehicle platform.
+                </p>
+            </a>
+        </div>
+
+        <div class="project">
+            <a href="projects/global-planner.html" class="project-link">
+                <img src="assets/autodrive/MCity.jpg" alt="Autonomous Vehicle Global Planner">
+                <h3>Autonomous Vehicle Global Planner (ROS2)</h3>
+                <p>
+                    Designed a ROS2 planning module generating legally
+                    traversable routes with lane-level localization and
+                    object-aware path evaluation.
+                </p>
+            </a>
+        </div>
+
+        <div class="project">
+            <a href="projects/manikin.html" class="project-link">
+                <img src="assets/coursework/modular-manikin.png" alt="Modular Medical Manikin">
+                <h3>Modular Medical Training Manikin</h3>
+                <p>
+                    Designed a modular medical training platform with
+                    swappable torso assemblies for procedural education.
+                </p>
+            </a>
+        </div>
+
+    </section>
+
+</div>
+
+<footer>
+    <div>
+        <a href="https://www.linkedin.com/in/anthonybeca/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+        </a>
+
+        <a href="mailto:anthony.beca@robotics.utias.utoronto.ca" class="social-icon">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>

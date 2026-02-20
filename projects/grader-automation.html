@@ -10,18 +10,15 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <video class="background-video" autoplay loop muted playsinline>
-        <source src="../assets/grader/grader-bkg.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
     <!-- Header Section -->
     <header>
-        <div class="button-container">
-            <a href="../index.html" class="animated-button">Home</a>
-            <a href="../projects.html" class="animated-button">Projects</a>
-            <a href="../cv.html" class="animated-button"> CV</a>
-            <a href="../mailto:anthony.beca@robotics.utias.utoronto.ca" class="animated-button">Contact</a>
-        </div>
+        <nav>
+            <a href="../index.html"> Home </a>
+            <a href="../projects.html"> Projects </a>
+            <a href="../deployments.html"> Deployments </a>
+            <a href="../cv.html"> CV </a>
+            <a href="mailto:anthony.beca@robotics.utias.utoronto.ca"> Contact </a>
+        </nav>
     </header>
 
     <!-- Project Overview -->
@@ -30,7 +27,8 @@
         <h1>Path Following Control of Motor Graders</h1>
         <div class="center-image">
             <figure>
-                <img src="../assets/grader/Collingwood.jpeg" alt="Josh and I at MacLean's Collingwood office." class="center-image">
+                <img src="../assets/grader/Collingwood.jpeg"
+                    alt="Dr. Marshall and I at MacLean's Collingwood office.">
                 <figcaption>Dr. Marshall and I at MacLean's Collingwood office.</figcaption>
             </figure>
         </div>
@@ -50,7 +48,7 @@
             <h2>Poster</h2>
         </div>
         <div class="pdf-container">
-            <iframe src="../assets/grader/CRV_Poster.pdf" type="application/pdf" width="50%", height="1000px"></iframe>
+            <iframe src="../assets/grader/CRV_Poster.pdf"></iframe>
         </div>
     </section>
 
@@ -60,36 +58,14 @@
             <h2>Paper</h2>
         </div>
         <div class="pdf-container">
-            <iframe src="../assets/grader/CRV_Paper.pdf" type="application/pdf" width="80%", height="800px"></iframe>
+            <iframe src="../assets/grader/CRV_Paper.pdf"></iframe>
         </div>
     </section>
 
-    <!-- Takeaways -->
-    <div class="text-content">
-        <h2>Takeaway</h2>
-        <p>
-            Read and review - as a guiding principle, you don't know what you don't know.
-        </p>
-    </div>
-
-    <!-- Software and Hardware Skills -->
-    <section id="skills">
-        <div class="skills-section">
-            <div class="skills-subsection">
-                <h2>Skills</h2>
-                <ul>
-                    <!-- <li>Vehicle Kinematics</li> -->
-                    <li>Control Theory</li>
-                    <li>Research and Technical Writing</li>
-                    <li>Python</li>
-                    <!-- Add more as necessary -->
-                </ul>          
-        </div>
-    </section>
 
      <!-- PDF Download Button -->
-    <div class="download-button" style="text-align: center; margin-top: 20px;">
-        <a href="../assets/grader/BecMar_CRV2025.pdf" download="BecMar_CRV2025.pdf" class="download-button" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #007BFF; text-decoration: none; border-radius: 5px;">
+    <div class="download-wrapper">
+        <a href="../assets/grader/CRV_Paper.pdf" download="BecMar_CRV2025.pdf" class="download-wrapper">
             Download Paper (PDF)
         </a>
     </div>
